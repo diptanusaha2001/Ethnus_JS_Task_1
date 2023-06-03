@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Show Date and Time</title>
+  <script>
+    function showDate() {
+      var currentDate = new Date();
+      var dateString = currentDate.toDateString();
+      document.getElementById("date").innerHTML = "Current Date: " + dateString;
+    }
+
+    function showTime() {
+      var currentDate = new Date();
+      var currentTime = currentDate.toLocaleTimeString('en-IN', { timeZone: 'Asia/Kolkata' });
+      document.getElementById("time").innerHTML = "Indian Standard Time: " + currentTime;
+    }
+  </script>
+</head>
+<body>
+  <button onclick="showDate()">Show Date</button>
+  <button onclick="showTime()">Show Time</button>
+  <div id="date"></div>
+  <div id="time"></div>
+</body>
+</html>
